@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с модальными окнами</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gif-container">
+            <img src="C:\Users\user\Downloads\773947703670341879-ezgif.com-gif-maker.gif" alt="Main GIF">
+        </div>
+        <h2><span class="gradient-text">SMM</span> Продвижение</h2>
+        <div class="blocks-container">
+            <div class="block" id="subscribers">
+                <i class="fas fa-users"></i>
+                <p>Подписчики</p>
+            </div>
+            <div class="block" id="target-ad">
+                <i class="fas fa-bullseye"></i>
+                <p>Таргет реклама</p>
+            </div>
+            <div class="block" id="content">
+                <i class="fa-solid fa-video"></i>
+                <p>Ваш Контент</p>
+            </div>
+            <div class="block" id="ai">
+                <i class="fas fa-robot"></i>
+                <p>AI</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Subscribers -->
+    <div id="subscribers-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-subscribers">&times;</span>
+            <h2>Подписчики</h2>
+            <p><strong><span class="gradient-text">Поможем вам набрать подписчиков</span></strong></p>
+            <p>- Подписчики из СНГ стран</p>
+            <p> - Минимальное количество ботов</p>
+            <p><span class="gradient-text">1,000Sub - 15$</span></p>
+            <p style="font-size: 14px;"><em>Тестовый тариф: 100Sub - 1$</em></p>
+            <button class="order-btn">Заказать</button>
+        </div>
+    </div>
+
+    <!-- Modal for Target Ads -->
+    <div id="target-ad-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-target-ad">&times;</span>
+            <h2>Таргет реклама</h2>
+            <p> Поможем настроить таргет рекламу, для более подробного обсуждения жми кнопку <span class="gradient-text">заказать</span></p>
+            <button class="order-btn">Заказать</button>
+        </div>
+    </div>
+
+    <!-- Modal for Content -->
+    <div id="content-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-content">&times;</span>
+            <h2>Контент</h2>
+            <p>Comming soon</p>
+            <i class="fas fa-sad-tear"></i>
+        </div>
+    </div>
+
+    <!-- Modal for AI -->
+    <div id="ai-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-ai">&times;</span>
+            <h2>AI</h2>
+            <p>Comming soon</p>
+            <i class="fas fa-sad-tear"></i>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <a href="#"  onclick="window.open('index.html', '_blank')"><i class="fa-solid fa-mug-saucer" id="glav"></i>IT</a>
+        <a href="#"><i class="fas fa-handshake"></i>SMM</a>
+        <a href="#" onclick="window.open('https://t.me/ITtbcstudio/15', '_blank')"><i class="fa-solid fa-fire" id="blog"></i>О нас</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Темный фон */
+    color: #fff; /* Белый текст для контента */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.gradient-text {
+            background: linear-gradient(to right, #FF7F50, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+.container {
+    text-align: center;
+}
+
+.gif-container img {
+    width: 45%;
+    margin-bottom: 30px;
+}
+
+.blocks-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.underlined {
+            text-decoration: underline;
+            font-size: 24px;
+            color: #333;
+        }
+
+.block {
+    background-color: #333; /* Темный фон для блоков */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ff7e00; /* Оранжевая рамка всегда */
+}
+
+.block:hover {
+    background-color: #444; /* Светлее при наведении */
+}
+
+.block i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.block p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #222; /* Темный фон для модальных окон */
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.order-btn {
+    background: linear-gradient(45deg, #ff7e00, #ff9e2c); /* Оранжевый градиент */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.order-btn:hover {
+    background: linear-gradient(45deg, #ff9e2c, #ff7e00); /* Инвертированный градиент при наведении */
+}
+
+.order-btn:focus {
+    outline: none;
+}
+
+.modal i {
+    font-size: 80px;
+    margin: 20px 0;
+    text-align: center; /* Центрируем эмодзи */
+}
+
+.modal p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+
+.navigation {
+
+position: fixed;
+bottom: 0;
+width: 100%;
+display: flex;
+justify-content: space-around;
+background-color: #333;
+color: white;
+padding: 10px 0;
+}
+
+.navigation a {
+color: white;
+text-decoration: none;
+text-align: center;
+font-size: 14px;
+}
+
+.navigation a i {
+display: block;
+font-size: 24px;
+margin-bottom: 5px;
+}
+
+
+</style>
+<script>
+    // Get modal elements
+const subscriberModal = document.getElementById('subscribers-modal');
+const targetAdModal = document.getElementById('target-ad-modal');
+const contentModal = document.getElementById('content-modal');
+const aiModal = document.getElementById('ai-modal');
+
+// Get button elements for each block
+const subscribersBtn = document.getElementById('subscribers');
+const targetAdBtn = document.getElementById('target-ad');
+const contentBtn = document.getElementById('content');
+const aiBtn = document.getElementById('ai');
+
+// Get close button elements
+const closeSubscribers = document.getElementById('close-subscribers');
+const closeTargetAd = document.getElementById('close-target-ad');
+const closeContent = document.getElementById('close-content');
+const closeAi = document.getElementById('close-ai');
+
+// Open modals when clicking on blocks
+subscribersBtn.onclick = function() {
+    subscriberModal.style.display = "block";
+}
+
+targetAdBtn.onclick = function() {
+    targetAdModal.style.display = "block";
+}
+
+contentBtn.onclick = function() {
+    contentModal.style.display = "block";
+}
+
+aiBtn.onclick = function() {
+    aiModal.style.display = "block";
+}
+
+// Close modals when clicking on "X"
+closeSubscribers.onclick = function() {
+    subscriberModal.style.display = "none";
+}
+
+closeTargetAd.onclick = function() {
+    targetAdModal.style.display = "none";
+}
+
+closeContent.onclick = function() {
+    contentModal.style.display = "none";
+}
+
+closeAi.onclick = function() {
+    aiModal.style.display = "none";
+}
+
+// Close modals when clicking outside of the modal content
+window.onclick = function(event) {
+    if (event.target == subscriberModal) {
+        subscriberModal.style.display = "none";
+    }
+    if (event.target == targetAdModal) {
+        targetAdModal.style.display = "none";
+    }
+    if (event.target == contentModal) {
+        contentModal.style.display = "none";
+    }
+    if (event.target == aiModal) {
+        aiModal.style.display = "none";
+    }
+}
+
+</script>

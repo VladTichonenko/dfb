@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiTry-Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+        }
+
+        .section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #FF7F50, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: #1a1a1a;
+            border-radius: 20px;
+            padding: 12px;
+            text-align: center;
+            position: relative;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card img {
+            max-width: 100px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .card.purple {
+            background: #6A0DAD;
+        }
+
+        .card.pink {
+            background: #FF1493;
+        }
+
+        .card.green {
+            background: #228B22;
+        }
+
+        .card.blue {
+            background: #1E90FF;
+        }
+
+        .card.lavender {
+            background: #9370DB;
+        }
+    </style>
+</head>
+<body>
+    <!-- Directions Section -->
+    <section class="section">
+        <h2>Направление <span class="gradient-text">работ</span></h2>
+        <div class="card-container">
+            <div class="card purple">
+                <img src="https://via.placeholder.com/100" alt="Мини-игры">
+                <h3>Мини-игры</h3>
+            </div>
+            <div class="card pink">
+                <img src="https://via.placeholder.com/100" alt="Интернет-магазины">
+                <h3>Интернет-магазины</h3>
+            </div>
+            <div class="card green">
+                <img src="https://via.placeholder.com/100" alt="Корпоративные сайты">
+                <h3>Корпоративные сайты</h3>
+                <p>Веб-ресурсы для информации о компании, её продуктах и контактах</p>
+            </div>
+            <div class="card blue">
+                <img src="https://via.placeholder.com/100" alt="Web3-решения">
+                <h3>Web3-решения</h3>
+            </div>
+            <div class="card lavender">
+                <img src="https://via.placeholder.com/100" alt="Лендинги">
+                <h3>Лендинги</h3>
+                <p>Одностраничные сайты</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

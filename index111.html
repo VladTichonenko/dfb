@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навигация</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: white;
+      height: 90%;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f0f0f0;
+      height: 10%;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .button {
+      flex: 1;
+      text-align: center;
+      padding: 10px 0;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    .button i {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .button.white {
+      background-color: white;
+      color: black;
+    }
+
+    .button.gray {
+      background-color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="header"></div>
+  <div class="footer">
+    <button class="button white">
+      <i class="fas fa-code"></i>
+      IT
+    </button>
+    <button class="button gray">
+      <i class="fas fa-bullhorn"></i>
+      SMM
+    </button>
+    <button class="button gray">
+      <i class="fas fa-info-circle"></i>
+      О нас
+    </button>
+  </div>
+</body>
+</html>
